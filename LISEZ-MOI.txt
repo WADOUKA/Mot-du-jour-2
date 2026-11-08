@@ -1,0 +1,62 @@
+MOT DU JOUR — APPLICATION INSTALLABLE ET 100 % HORS CONNEXION
+==============================================================
+
+Ce dossier est une application Web complète (PWA). Il n'y a rien à compiler.
+Une fois mise en ligne UNE SEULE FOIS, elle s'installe sur le téléphone comme une
+application et fonctionne ensuite sans internet.
+
+CE QUI DOIT ÊTRE FAIT : mettre ce dossier sur un site (gratuit)
+---------------------------------------------------------------
+Une application installable doit venir d'une adresse sécurisée (https). Il faut donc
+déposer ce dossier sur un hébergeur gratuit. Voici le plus simple (environ 5 minutes) :
+
+  1. Décompressez l'archive. Vous obtenez le dossier « mot-du-jour-pwa ».
+     Il doit contenir directement : index.html, sw.js, manifest.webmanifest, icons.
+  2. Allez sur  https://app.netlify.com/drop  et créez un compte gratuit
+     (vous pouvez utiliser votre compte Google).
+  3. Glissez le DOSSIER « mot-du-jour-pwa » dans la zone « Drag and drop ».
+  4. Netlify affiche une adresse du type  https://xxxx.netlify.app
+     C'est l'adresse de votre application. Vous pouvez la renommer dans les
+     paramètres du site (Site configuration → Change site name).
+
+(Les écrans des hébergeurs changent parfois : si un libellé diffère, cherchez
+« déposer un dossier » ou « Drop ». D'autres hébergeurs gratuits marchent aussi :
+GitHub Pages, Cloudflare Pages. Seule règle : index.html doit être à la racine.)
+
+INSTALLER SUR LE TÉLÉPHONE
+--------------------------
+ANDROID (Chrome) :
+  1. Ouvrez l'adresse de l'application dans Chrome. Laissez-la se charger une fois.
+  2. Paramètres de l'application (bouton ⚙) → « Installer l'application » → Installer.
+     (ou menu ⋮ de Chrome → « Installer l'application » / « Ajouter à l'écran d'accueil »)
+  3. L'icône « Mot du jour » apparaît sur l'écran d'accueil.
+
+IPHONE / IPAD (Safari) :
+  1. Ouvrez l'adresse dans Safari.
+  2. Touchez le bouton Partager, puis « Sur l'écran d'accueil ».
+
+ORDINATEUR (Chrome ou Edge) :
+  Cliquez sur l'icône d'installation à droite de la barre d'adresse.
+
+HORS CONNEXION
+--------------
+Après la première ouverture avec internet, tout est enregistré sur l'appareil : les
+365 mots, les 365 conseils, les langues, les réglages, la lecture vocale (selon les
+voix du téléphone), les favoris et la création d'images. Dans ⚙ → « Installer
+l'application », le message « Prête pour le hors connexion » confirme que c'est prêt.
+
+METTRE À JOUR L'APPLICATION PLUS TARD
+-------------------------------------
+Remplacez les fichiers sur l'hébergeur et changez le numéro de version dans sw.js
+(ligne CACHE_VERSION, par exemple « mot-du-jour-v10-2 »). Les téléphones récupèrent
+la nouvelle version automatiquement à la prochaine ouverture avec internet.
+
+CE QUI A ÉTÉ TESTÉ (Chromium sur ordinateur)
+--------------------------------------------
+- Chromium ne signale aucune erreur d'installabilité (manifeste, icônes, service worker).
+- Après la première visite, le serveur a été coupé : rechargement, nouvel onglet et
+  adresse avec paramètres fonctionnent, avec les 365 mots et 365 conseils.
+- Fonctionne à la racine d'un site et dans un sous-dossier (ex. /app/).
+- Mise à jour de version : ancien cache supprimé, nouvelle version servie.
+- Téléchargement d'images, langues, favoris : OK hors connexion.
+NON TESTÉ : téléphone réel, Safari/iPhone, magasin d'applications.

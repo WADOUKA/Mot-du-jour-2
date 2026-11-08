@@ -1,0 +1,39 @@
+{
+  "id": "./",
+  "name": "Mot du jour — WADOUKA Fabien",
+  "short_name": "Mot du jour",
+  "description": "365 mots rares et un conseil par jour pour le bien-être, les relations, la paix du cœur et la résilience.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eaf7ff",
+  "theme_color": "#168ed0",
+  "categories": [
+    "education",
+    "lifestyle",
+    "books"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
